@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { getProjects } from "../api/projects";
+// import React, { useEffect, useState } from "react";
+// import { getProjects } from "../services/api/projects";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    getProjects().then((data) => setProjects(data));
-  }, []);
+  // useEffect(() => {
+  //   getProjects().then((data) => setProjects(data));
+  // }, []);
 
-  console.log(projects);
+  // console.log(projects);
   return (
     <section className="bg-white py-20 px-6 text-center">
       {/* Judul */}
