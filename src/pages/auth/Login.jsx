@@ -38,12 +38,12 @@ export default function Login() {
           withCredentials: true, // ⬅️ INI PENTING
         }
       );
-      const data = res.data;
-      console.log(data);
-      if (res.ok) {
+        const data = res.data;
+        console.log(data);
+      if (res.statusText == "OK") {
         // Simpan token ke localStorage
-        if (data.token) {
-          localStorage.setItem("auth_token", data.token);
+        if (data.data.token) {
+          localStorage.setItem("auth_token", data.data.token.access_token);
         }
         setMessage("Login berhasil!");
         navigate("/admin");
